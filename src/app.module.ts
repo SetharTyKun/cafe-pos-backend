@@ -21,6 +21,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
     }),
     CategoriesModule,
     ProductsModule,
+    UsersModule,
+    OrdersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
