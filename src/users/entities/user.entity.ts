@@ -11,7 +11,7 @@ export class User{
     username: string;
 
     @Column({ type: "varchar"})
-    password_hash: string;
+    password: string;
 
     @Column({ type: "enum", enum: UserRole, default: UserRole.CASHIER})
     role: UserRole;

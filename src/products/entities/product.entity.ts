@@ -9,6 +9,10 @@ export class Product {
     product_id: number;
     @Column({type: 'varchar'})
     product_name: string;
+    @Column({type: 'decimal', precision:5, scale:2, default: 0})
+    price: number;
+    @Column({default:true})
+    is_available: boolean;
     @ManyToOne(()=> Category, (category)=> category.products)
     @JoinColumn({ name: 'category_id'})
     category: Relation<Category>;
