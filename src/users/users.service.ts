@@ -35,4 +35,10 @@ export class UsersService {
     await this.userRepository.delete(id);
     return { message: `User #${id} has been deleted successfully.`, deleteUser: userToRemove};
   }
+
+  async findOneByUsername(username: string){
+    return await this.userRepository.findOne({
+      where: { username: username }
+    });
+  }
 }
